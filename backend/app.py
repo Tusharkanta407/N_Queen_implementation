@@ -131,8 +131,16 @@ def health_check():
         'version': '1.0.0'
     })
 
+# Add this at the top of the file with other imports
+import os
+
+# Modify the CORS setup to allow your Vercel frontend domain
+CORS(app, origins=["http://localhost:3000", "https://your-vercel-app-name.vercel.app"])
+
+# Modify the last part of the file
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
     print("🚀 AI N-Queens Backend Server")
-    print("📡 Running on: http://localhost:5000")
+    print(f"📡 Running on port: {port}")
     print("🔧 Press Ctrl+C to stop")
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=port)

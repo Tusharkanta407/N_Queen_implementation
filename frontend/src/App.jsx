@@ -7,6 +7,7 @@ import LogPanel from './components/LogPanel.jsx';
 import ComparisonPanel from './components/ComparisonPanel.jsx';
 import './App.css';
 
+// Replace this line
 const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 function App() {
