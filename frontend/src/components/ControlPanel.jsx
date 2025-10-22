@@ -68,7 +68,10 @@ const ControlPanel = ({
           </label>
           <select
             value={boardSize}
-            onChange={(e) => setBoardSize(parseInt(e.target.value))}
+            onChange={(e) => {
+              onReset(); // Reset the board first
+              setBoardSize(parseInt(e.target.value));
+            }}
             disabled={isRunning}
             className="control-select"
           >

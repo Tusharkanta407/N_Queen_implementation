@@ -28,6 +28,21 @@ function App() {
   const [learnMode, setLearnMode] = useState(false);
   const [speed, setSpeed] = useState(100);
 
+  // Add this effect to reset solution when board size changes
+  // Delete these lines at the bottom of the file
+  // useEffect(() => {
+  //   // Reset solution and stats when board size changes
+  //   setSolution(null);
+  //   setStats({
+  //     steps: 0,
+  //     constraintChecks: 0,
+  //     backtrackCount: 0,
+  //     generation: 0,
+  //     fitness: 0,
+  //     timeTaken: 0
+  //   });
+  // }, [boardSize]);
+  
   // Fetch logs periodically when solving
   useEffect(() => {
     let interval;
