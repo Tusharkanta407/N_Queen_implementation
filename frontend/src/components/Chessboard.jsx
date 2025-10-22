@@ -162,28 +162,6 @@ const Chessboard = ({ n, solution, algorithm, isRunning, stats, learnMode }) => 
           )}
         </div>
 
-
-        {/* Solution status - positioned over the chessboard */}
-        {solution && solution.length > 0 && !isRunning && (
-          <div className="solution-status">
-            <div className="status-icon">🎉</div>
-            <div className="status-text">
-              <h4>Solution Found!</h4>
-              <p>All {n} queens are placed without conflicts</p>
-              <p className="solution-stats">
-                Algorithm: {algorithm} | Steps: {stats.steps} | Time: {stats.timeTaken}s
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* Fallback solution indicator */}
-        {solution && solution.length > 0 && !isRunning && (
-          <div className="solution-indicator">
-            <span className="indicator-text">✅ Solution Complete!</span>
-          </div>
-        )}
-
         {/* Learn mode explanations */}
         {learnMode && (
           <div className="learn-explanations">

@@ -70,19 +70,25 @@
 
 .control-select {
   padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  background: rgba(255, 255, 255, 0.15); /* Increased opacity for better visibility */
+  border: 2px solid rgba(102, 126, 234, 0.5); /* Increased border opacity */
   border-radius: 10px;
   color: #ffffff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600; /* Increased font weight */
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.control-select option {
+  background-color: #1a1a2e; /* Dark background for dropdown options */
+  color: #ffffff; /* White text for options */
+  font-weight: 500;
+}
+
 .control-select:hover:not(:disabled) {
-  border-color: rgba(102, 126, 234, 0.5);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.8);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .control-select:focus {
