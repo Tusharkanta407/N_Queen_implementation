@@ -135,7 +135,7 @@ def health_check():
 import os
 
 # Modify the CORS setup to allow your Vercel frontend domain
-CORS(app, origins=["http://localhost:3000", "https://your-vercel-app-name.vercel.app"])
+CORS(app, origins=["http://localhost:3000", "https://n-queen-implementation.vercel.app/"])
 
 # Modify the last part of the file
 if __name__ == '__main__':
